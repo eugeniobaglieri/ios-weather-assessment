@@ -6,6 +6,7 @@ target 'weather-assessment' do
   use_frameworks!
 
   # Pods for weather-assessment
+  pod 'Alamofire', '~> 4.9'
 
   target 'weather-assessmentTests' do
     inherit! :search_paths
