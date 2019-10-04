@@ -26,7 +26,7 @@
  http://api.openweathermap.org/data/2.5/weather
  
  **ApiKey:**
- 5abdd2e83c8121d39bdbb4854344dcff
+ d73ebe7666213fce3740edab89797838
  
  **Query Elements:**
  * **q**:   City for which the weather is requested. Ex: London, Rome, Los Angeles ...
@@ -34,7 +34,7 @@
  
   **Request sample:**
  
- ```http://api.openweathermap.org/data/2.5/weather?q=London&apikey=5abdd2e83c8121d39bdbb4854344dcff```
+ [http://api.openweathermap.org/data/2.5/weather?q=London&apikey=d73ebe7666213fce3740edab89797838](http://api.openweathermap.org/data/2.5/weather?q=London&apikey=d73ebe7666213fce3740edab89797838)
  
  **Response sample:**
  
