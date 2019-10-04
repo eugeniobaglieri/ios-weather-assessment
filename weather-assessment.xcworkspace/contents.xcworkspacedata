@@ -4,4 +4,7 @@
    <FileRef
       location = "group:weather-assessment.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>
