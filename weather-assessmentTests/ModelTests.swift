@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import CoreData
 @testable import weather_assessment
 
 class ModelTests: XCTestCase {
@@ -47,6 +48,38 @@ class ModelTests: XCTestCase {
         } catch let error {
             XCTFail("\(error)")
         }
+    }
+    
+    func test_CachedWeatherToWeatherInformation() {
+        let cached = CachedWeather(context: NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType))
+        cached.data = jsonSampleData
+        
+        XCTAssertNotNil(cached.weatherInformation())
+       
+        let weatherInfo = cached.weatherInformation()!
+        
+        XCTAssert(weatherInfo.cityID == 2643743)
+        XCTAssert(weatherInfo.cityName == "London")
+        XCTAssert(weatherInfo.weather.count == 1)
+        
+        let weather = weatherInfo.weather.first!
+        XCTAssert(weather.name == "Clouds")
+        XCTAssert(weather.description == "broken clouds")
+        XCTAssert(weather.identifier == 803)
+        XCTAssert(weather.iconCode == "04d")
+        
+        let wind = weatherInfo.wind
+        XCTAssert(wind.degrees == 240)
+        XCTAssert(wind.speed == 4.1)
+        
+        let clouds = weatherInfo.clouds
+        XCTAssert(clouds.coverage == 75)
+        
+        let atmo = weatherInfo.atmosphere
+        XCTAssert(atmo.temperature == 14.48)
+        XCTAssert(atmo.pressure == 1005)
+        XCTAssert(atmo.humidity == 72)
+        
     }
     
 }
