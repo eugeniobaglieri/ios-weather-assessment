@@ -16,7 +16,7 @@ extension CachedWeather {
         return NSFetchRequest<CachedWeather>(entityName: "CachedWeather")
     }
 
-    @NSManaged public var timestamp: Double
+    @NSManaged public var expiringTime: TimeInterval
     @NSManaged public var city: String?
     @NSManaged public var data: Data?
 

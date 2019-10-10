@@ -47,6 +47,10 @@ class CoreDataManager {
         return persistentContainer.viewContext
     }
     
+    lazy var privateContext: NSManagedObjectContext = {
+        return persistentContainer.newBackgroundContext()
+    }()
+    
     private(set) lazy var backgroundContext: NSManagedObjectContext = {
         return persistentContainer.newBackgroundContext()
     }()
@@ -56,7 +60,7 @@ class CoreDataManager {
         self.bundle = bundle
     }
     
-    func setup(storeType: StoreType = .sqlite, location: StoreLocation = .documents, bundle: Bundle? = nil, completionHandler: @escaping (Error?) -> Void) {
+    func setup(storeType: StoreType = .sqlite, location: StoreLocation = .documents, bundle: Bundle? = nil, completionHandler: @escaping (ManagerError?) -> Void) {
         
         let bundle = bundle ?? .main
         
