@@ -8,10 +8,10 @@
 
 struct WindCondition {
     let speed: Double
-    let degrees: Double
+    let degrees: Double?
 }
 
-extension WindCondition: Decodable {
+extension WindCondition: Codable {
     
     enum CodingKeys: String, CodingKey {
         case speed

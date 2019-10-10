@@ -11,7 +11,7 @@ struct Coordinates {
     let longitude: Double
 }
 
-extension Coordinates: Decodable {
+extension Coordinates: Codable {
     
     enum CodingKeys: String, CodingKey {
         case latitude = "lat"

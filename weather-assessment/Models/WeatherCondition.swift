@@ -13,7 +13,7 @@ struct WeatherCondition {
     let iconCode: String
 }
 
-extension WeatherCondition: Decodable {
+extension WeatherCondition: Codable {
     
     enum CodingKeys: String, CodingKey {
         case identifier = "id"

@@ -15,7 +15,7 @@ struct WeatherInformation {
     let atmosphere: AtmosphericCondition
 }
 
-extension WeatherInformation: Decodable {
+extension WeatherInformation: Codable {
     
     enum CodingKeys: String, CodingKey {
         case cityID = "id"

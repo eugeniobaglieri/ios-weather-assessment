@@ -12,7 +12,7 @@ struct AtmosphericCondition {
     let humidity: Double
 }
 
-extension AtmosphericCondition: Decodable {
+extension AtmosphericCondition: Codable {
     
     enum CodingKeys: String, CodingKey {
         case temperature = "temp"

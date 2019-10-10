@@ -10,7 +10,7 @@ struct CloudsCondition {
     let coverage: Double
 }
 
-extension CloudsCondition: Decodable {
+extension CloudsCondition: Codable {
     
     enum CodingKeys: String, CodingKey {
         case coverage = "all"
