@@ -7,6 +7,7 @@ target 'weather-assessment' do
 
   # Pods for weather-assessment
   pod 'Alamofire', '~> 5.0.0-rc.2'
+  pod 'Kingfisher', '~> 5.0'
 
   target 'weather-assessmentTests' do
     inherit! :search_paths
