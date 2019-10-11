@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:weather-assessment/Models/CachedRequest/CachedWeather+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:weather-assessment/Models/CachedRequest/CachedWeather+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
       location = "group:weather-assessment.xcodeproj">
    </FileRef>
    <FileRef
